@@ -71,8 +71,63 @@ while wb_robot_step(TIME_STEP) ~= -1
         wb_robot_step(1000);
         wb_motor_set_velocity(left_m, 0);
         wb_motor_set_velocity(right_m, 0);
-        else
-        
+        wb_motor_set_velocity(left_m, 3);
+        wb_motor_set_velocity(right_m, 3);
+        wb_robot_step(2500);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, -3);
+        wb_motor_set_velocity(right_m, -3);
+        wb_robot_step(2500);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, 3);
+        wb_motor_set_velocity(right_m, 0);
+        wb_robot_step(2000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, 3);
+        wb_motor_set_velocity(right_m, 3);
+        wb_robot_step(1500);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, -3);
+        wb_motor_set_velocity(right_m, -3);
+        wb_robot_step(3000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 3);
+        wb_robot_step(4000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, 3);
+        wb_motor_set_velocity(right_m, 3);
+        wb_robot_step(2000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, -3);
+        wb_motor_set_velocity(right_m, -3);
+        wb_robot_step(5000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, 3);
+        wb_motor_set_velocity(right_m, 0);
+        wb_robot_step(8000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, -3);
+        wb_motor_set_velocity(right_m, -3);
+        wb_robot_step(3000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, 3);
+        wb_motor_set_velocity(right_m, 0);
+        wb_robot_step(3000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, 3);
+        wb_motor_set_velocity(right_m, 3);
         end
         
   
