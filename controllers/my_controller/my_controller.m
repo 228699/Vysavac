@@ -7,7 +7,7 @@
 
 % uncomment the next two lines if you want to use
 % MATLAB's desktop to interact with the controller:
-%desktop;
+desktop;
 %keyboard;
 
 TIME_STEP = 64;
@@ -36,6 +36,12 @@ wb_distance_sensor_enable(c_left,64);
 c_right = wb_robot_get_device('cliff_right');
 wb_distance_sensor_enable(c_right,64);
 
+%SETTINGS POSITION SENSOR
+l_w_sensor = wb_robot_get_device('left wheel sensor');
+wb_position_sensor_enable(l_w_sensor, 64);
+r_w_sensor = wb_robot_get_device('right wheel sensor');
+wb_position_sensor_enable(r_w_sensor, 64);
+
 
 while wb_robot_step(TIME_STEP) ~= -1
    %SENZORS TOUCH
@@ -47,9 +53,28 @@ while wb_robot_step(TIME_STEP) ~= -1
    distance_c_f_right = wb_distance_sensor_get_value(c_f_right);
    distance_c_left = wb_distance_sensor_get_value(c_left);
    distance_c_right = wb_distance_sensor_get_value(c_right);
+   
+   %SENZOR POSITION
+   position_l_w_sensor = wb_position_sensor_get_value(l_w_sensor);
+   position_r_w_sensor = wb_position_sensor_get_value(r_w_sensor);
   
-  
-  
+  if (touch_left == 1) & (touch_right == 1)
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, -3);
+        wb_motor_set_velocity(right_m, -3);
+        wb_robot_step(3000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 3);
+        wb_robot_step(1000);
+        wb_motor_set_velocity(left_m, 0);
+        wb_motor_set_velocity(right_m, 0);
+        else
+        
+        end
+        
   
   
   
